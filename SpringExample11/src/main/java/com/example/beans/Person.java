@@ -2,6 +2,7 @@ package com.example.beans;
 
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -14,14 +15,14 @@ public class Person {
    beans that is 'injecting beans' (Objects) at runtime by Spring Dependency Injection mechanism
    ====================================================================================================
      */
-    private final Vehicle vehicle;
+    private Vehicle vehicle;
     @Autowired
     public Person(Vehicle vehicle){
         System.out.println("Person bean created by Spring!");
         this.vehicle = vehicle;
     }
     @PostConstruct
-    public void initalize(){
+    public void initialize(){
         setName("Varun");
     }
 

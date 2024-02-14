@@ -3,7 +3,7 @@ package com.example.beans;
 import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Component;
 
-@Component
+
 public class Vehicle {
     private String name;
     public Vehicle(){
@@ -11,10 +11,9 @@ public class Vehicle {
     }
 
 
-    @PostConstruct
-    public void initialize(){
-        setName("BMW");
-    }
+//    public void initialize(){
+//        setName("BMW");
+//    }
 
     public String getName() {
         return name;
